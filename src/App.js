@@ -13,6 +13,7 @@ function App() {
   }
 
   return (
+    <>
     <div className="App">
       <div>
         <button
@@ -21,14 +22,18 @@ function App() {
           disabled={disabled}>Change to {newColor}
         </button>
       </div>
-      <div><input
-        type='checkbox'
-        id='enable-button-checkbox'
-        defaultChecked={disabled}
-        aria-checked={disabled}
-        onChange={(e) => setDisabled(e.target.checked)}
-      /></div>
+      <div>
+          <input
+          type='checkbox'
+          id='enable-button-checkbox'
+          defaultChecked={disabled}
+          aria-checked={disabled}
+          onChange={(e) => setDisabled(e.target.checked)}
+        />
+        <label htmlFor="enable-button-checkbox" >Disabled button</label>
+      </div>
     </div>
+    </>
   );
 }
 
